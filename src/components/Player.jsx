@@ -21,7 +21,7 @@ const Player = ({ lerp = THREE.MathUtils.lerp }) => {
     const { forward, backward, left, right } = getKeys();
 
     const velocity = player.current.linvel();
-
+    console.log('velocity', velocity);
     // update camera
     const playerPosition = player.current.translation();
     state.camera.position.copy(playerPosition);
@@ -38,7 +38,7 @@ const Player = ({ lerp = THREE.MathUtils.lerp }) => {
       colliders={false}
       mass={1}
       type="dynamic"
-      position={[15, 1, 1]}
+      position={[15, 2, 1]}
       enabledRotations={[false, false, false]}
     >
       <CapsuleCollider args={[0.5, 0.2]} />

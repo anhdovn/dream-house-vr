@@ -28,7 +28,7 @@ function App() {
           quaternion: [-0.0574175831445875, 0.7039123027253196, 0.05727687233775081, 0.7056415882818822],
         }}
       >
-        <Physics>
+        <Physics gravity={[0, -30, 0]}>
           <House position={[0, 0, 0]} />
           <Player />
           <Debug />
