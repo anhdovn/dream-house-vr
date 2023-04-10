@@ -31,7 +31,7 @@ function App() {
         <Physics gravity={[0, -30, 0]}>
           <House position={[0, 0, 0]} />
           <Player />
-          <Debug />
+          {/* <Debug /> */}
         </Physics>
         {/* <OrbitControls maxPolarAngle={Math.PI / 2.1} /> */}
         <ambientLight />
