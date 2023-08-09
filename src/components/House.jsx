@@ -1,5 +1,4 @@
 import { useGLTF } from '@react-three/drei';
-import { RigidBody } from '@react-three/rapier';
 import React from 'react';
 
 export default function House(props) {
@@ -199,9 +198,9 @@ export default function House(props) {
           <mesh geometry={nodes['Material-kitchen_gloss'].geometry} material={materials.kitchen_gloss} />
           <mesh geometry={nodes['Material-landscaping_trans'].geometry} material={materials.landscaping_trans} />
           <mesh geometry={nodes['Material-landscaping_gloss'].geometry} material={materials.landscaping_gloss} />
-          <RigidBody type="fixed" restitution={0.2} friction={1}>
-            <mesh geometry={nodes['Material-landscaping_matt'].geometry} material={materials.landscaping_matt} />
-          </RigidBody>
+
+          <mesh geometry={nodes['Material-landscaping_matt'].geometry} material={materials.landscaping_matt} />
+
           <group position={[-8.98, 0.38, -3.68]} scale={[1.2, 1.4, 1.4]}>
             <mesh
               geometry={nodes['Material-LCD_Screen_highgloss'].geometry}
@@ -270,9 +269,7 @@ export default function House(props) {
             <mesh geometry={nodes['Material-wall_ovens_lowgloss'].geometry} material={materials.wall_ovens_lowgloss} />
           </group>
           <mesh geometry={nodes['Material-walls_gloss'].geometry} material={materials.walls_gloss} />
-          <RigidBody type="fixed" colliders="trimesh" restitution={0.2} friction={1}>
-            <mesh geometry={nodes['Material-walls_matt'].geometry} material={materials.walls_matt} />
-          </RigidBody>
+          <mesh geometry={nodes['Material-walls_matt'].geometry} material={materials.walls_matt} />
           <group position={[-1.05, -0.18, 6.87]} rotation={[Math.PI, 0, Math.PI]} scale={[0.94, 0.9, 0.94]}>
             <mesh geometry={nodes['Material-washer_dryer_gloss'].geometry} material={materials.washer_dryer_gloss} />
             <mesh geometry={nodes['Material-washer_dryer_matt'].geometry} material={materials.washer_dryer_matt} />
@@ -280,15 +277,8 @@ export default function House(props) {
           </group>
         </group>
       </group>
-      <RigidBody type="fixed" restitution={0.2} friction={1}>
-        <mesh geometry={nodes.Plane.geometry} material={materials.ground} position={[0, -0.31, 0]} />
-      </RigidBody>
-      <mesh
-        geometry={nodes.Cube.geometry}
-        material={nodes.Cube.material}
-        position={[-1.52, 0, -3.57]}
-        scale={[1.53, 1, 2.14]}
-      />
+      <mesh geometry={nodes.Plane.geometry} material={materials.ground} position={[0, -0.31, 0]} />
+
     </group>
   );
 }

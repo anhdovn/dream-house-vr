@@ -10,7 +10,6 @@ root.render(
   <React.StrictMode>
     <Suspense fallback={<Loader />}>
       <App />
-      <div className="dot" />
     </Suspense>
   </React.StrictMode>
 );
