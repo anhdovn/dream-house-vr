@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { Controllers, Hands, VRButton, XR } from '@react-three/xr';
+import { Controllers, VRButton, XR } from '@react-three/xr';
 import './App.css';
 import Env from './components/Env';
 import House from './components/House';
@@ -24,7 +24,9 @@ function App() {
           <ambientLight />
           <Env />
         </XR>
+
       </Canvas>
+
     </>
   );
 }
